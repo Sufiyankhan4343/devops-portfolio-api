@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rg-devops-portfolio-project"
-  location = "East US" # You can change this to your preferred region
+  location = "West US" # You can change this to your preferred region
 }
 
 resource "azurerm_storage_account" "storage" {
