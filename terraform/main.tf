@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rg-devops-portfolio-project"
-  location = "West US" # You can change this to your preferred region
+  location = "Southeast Asia" 
 }
 
 resource "azurerm_storage_account" "storage" {
-  name                     = "stdevopsportfoliouniq" # Must be globally unique and lowercase
+  name                     = "stdevopsportfoliosg" # Must be globally unique and lowercase
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
@@ -20,7 +20,7 @@ resource "azurerm_service_plan" "app_plan" {
 }
 
 resource "azurerm_linux_function_app" "function_app" {
-  name                       = "func-devops-portfolio-api" # Must be globally unique
+  name                       = "func-devops-portfolio-api-sg" # Must be globally unique
   resource_group_name        = azurerm_resource_group.rg.name
   location                   = azurerm_resource_group.rg.location
   service_plan_id            = azurerm_service_plan.app_plan.id
