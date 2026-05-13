@@ -10,7 +10,7 @@ def system_info(req: func.HttpRequest) -> func.HttpResponse:
 
     # Personalized JSON response for your portfolio
     data = {
-        "developer": "Sufiyan",
+        "developer": "AFFAN",
         "current_focus": "Transitioning to DevOps Engineer",
         "message": "Welcome to my Serverless API! This infrastructure was built using Terraform and deployed via GitHub Actions.",
         "core_skills": [
